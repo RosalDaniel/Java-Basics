@@ -1,0 +1,31 @@
+public class AscendingOrder {
+
+   public static void main(String[] args) {
+      
+      int[] arrayNumbers = new int[] {100, 102, 133, 114, 15, 316, 417, 248, 719, 10, 502, 623, 443, 521, 668, 789, 658, 419, 160, 911};
+      int tempNum = 0;
+      
+      System.out.println(" Default Array ");
+      
+      for(int i = 0; i < arrayNumbers.length; i++) {
+         System.out.print(" " + arrayNumbers[i]);
+      }
+      
+      for(int i = 0; i < arrayNumbers.length; i++){
+         for(int j = i + 1; j < arrayNumbers.length; j++) {
+            if(arrayNumbers[i] > arrayNumbers[j]) {
+               tempNum = arrayNumbers[i];
+               arrayNumbers[i] = arrayNumbers[j];
+               arrayNumbers[j] = tempNum;
+            }
+         }
+      }
+      
+      System.out.println("\n Array Sorted to Ascending Order: ");
+      
+      for(int i = 0; i < arrayNumbers.length; i++) {
+         System.out.print(" " + arrayNumbers[i]);
+      }
+   }
+   
+}
