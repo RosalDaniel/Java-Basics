@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Sum {
+   
+   public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      int[] arrayNumbers = new int[20];
+      int sum = 0;
+      
+      System.out.println("Enter values of an Array ");
+      
+      for(int i = 0; i < 20; i++) {
+         arrayNumbers[i] = sc.nextInt();
+      }
+      
+      for(int i = 0; i < arrayNumbers.length; i++) {
+         sum = sum + arrayNumbers[i];
+      }
+      System.out.println("\n You have entered: ");  
+      
+      for (int i=0; i < 20; i++) {  
+         System.out.print(arrayNumbers[i]+ " ");  
+      } 
+       
+      System.out.println("\n Summation Array Values is: " + sum);
+   }
+
+}
